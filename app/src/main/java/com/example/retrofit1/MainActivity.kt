@@ -45,18 +45,10 @@ class MainActivity : AppCompatActivity() {
                 myAdapter.notifyDataSetChanged()
                 binding.recyclerview.adapter=myAdapter
 
-               /* val myStringBuilder=StringBuilder()
-                for (myData in responseBody){
-                    myStringBuilder.append(myData.id)
-                    myStringBuilder.append("\n")
-                }
-               *//* val text1=findViewById<TextView>(R.id.text1)
-                text1.text=myStringBuilder*//*
-                binding.text1.text=myStringBuilder*/
             }
 
             override fun onFailure(call: Call<List<MyData.MyDataItem>?>, t: Throwable) {
-                    Log.d("MainActivity","onfailer"+t.message)
+                    Log.d("MainActivity","on failure"+t.message)
             }
         })
 
